@@ -1,0 +1,39 @@
+﻿<Page
+    x:Class="code.fun.do_HealthCare_Cycle_1.ViewReportInRegion"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot RequestedTheme="Dark" Background="Black">
+            <Pivot.Title>
+                <TextBlock Text=" Analytic Page" FontFamily="Segoe UI Symbol" Tapped="TextBlock_Tapped" />
+            </Pivot.Title>
+            <PivotItem Header="Chart">
+                <Grid>
+                    <TextBox x:Name="pin" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="PIN Code" BorderBrush="#9900D70A" Margin="0" Height="1" KeyDown="pin_KeyDown"/>
+                    <ScrollViewer Margin="0,37,0,10" HorizontalScrollBarVisibility="Visible" VerticalScrollBarVisibility="Disabled">
+                        <StackPanel x:Name="stack" Orientation="Horizontal">
+                            <local:BarControl x:Name="jan" Label="JAN" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="feb" Label="FEB" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="mar" Label="MAR" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="apr" Label="APR" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="may" Label="MAY" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="jun" Label="JUN" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="jul" Label="JUL" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="aug" Label="AUG" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="sep" Label="SEP" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="oct" Label="OCT" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="nov" Label="NOV" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                            <local:BarControl x:Name="dec" Label="DEC" Value="0" MinWidth="28" Background="#FFEE1E1E" />
+                        </StackPanel>
+                    </ScrollViewer>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

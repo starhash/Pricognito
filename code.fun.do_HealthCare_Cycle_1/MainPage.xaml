@@ -1,0 +1,63 @@
+﻿<Page
+    x:Class="code.fun.do_HealthCare_Cycle_1.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot Title="EDD" Background="Black" Foreground="{x:Null}" RequestedTheme="Dark" Margin="0,-32,0,0" FontSize="16">
+            <PivotItem Header="Precognito">
+                <Grid>
+                    <ListView x:Name="listView" Margin="0">
+                        <ListViewItem x:Name="FeedMode" Background="Black" Foreground="White" Padding="12,4" Tapped="FeedMode_Tapped" RequestedTheme="Dark">
+                            <ListViewItem.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="48" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,6,0,0">
+                                        <TextBlock Text="Start in Feed Mode" Margin="4,0" />
+                                        <TextBlock Text="(Registration with the IMR database required)" FontSize="10" Margin="4,0"/>
+                                    </StackPanel>
+                                    <Image Margin="12" Source="Assets/disease.png" Height="24" Width="24" HorizontalAlignment="Left"  />
+                                </Grid>
+                            </ListViewItem.Content>
+                        </ListViewItem>
+                        <ListViewItem x:Name="DebugMode" Background="Black" Foreground="White" Padding="12,4" RequestedTheme="Dark" Tapped="DebugMode_Tapped">
+                            <Grid>
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="48" />
+                                    <ColumnDefinition />
+                                </Grid.ColumnDefinitions>
+                                <StackPanel Grid.Column="1" Margin="0,-6,0,0">
+                                    <TextBlock Text="Start in Analyst Mode" Margin="4,11,4,0" />
+                                    <TextBlock Text="(Governmental, Enterprise, Business)" FontSize="10" Margin="4,0"/>
+                                </StackPanel>
+                                <Image Grid.Column="0" Margin="12" Source="Assets/search28.png" Height="24" Width="24" HorizontalAlignment="Left"  />
+                            </Grid>
+                        </ListViewItem>
+                        <ListViewItem x:Name="AlertMode" Background="Black" Foreground="White" Padding="12,4" RequestedTheme="Dark" Tapped="AlertMode_Tapped">
+                            <ListViewItem.Content>
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="48" />
+                                        <ColumnDefinition />
+                                    </Grid.ColumnDefinitions>
+                                    <StackPanel Grid.Row="0" Grid.Column="1" Margin="0,6,0,0">
+                                        <TextBlock Text="Start in Alert Mode" Margin="4,0" />
+                                        <TextBlock Text="(Registration PAN/AADHAR required)" FontSize="10" Margin="4,0"/>
+                                    </StackPanel>
+                                    <Image Grid.Row="0" Margin="12" Source="Assets/data-analytics.png" Height="24" Width="24" HorizontalAlignment="Left"  />
+                                </Grid>
+                            </ListViewItem.Content>
+                        </ListViewItem>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

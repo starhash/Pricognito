@@ -1,0 +1,28 @@
+﻿<Page
+    x:Class="code.fun.do_HealthCare_Cycle_1.MostContagious"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot RequestedTheme="Dark" Background="#FF5F9925">
+            <Pivot.Title>
+                <TextBlock Text=" Analytic Page" FontFamily="Segoe UI Symbol" Tapped="TextBlock_Tapped" />
+            </Pivot.Title>
+            <PivotItem Header="Most and Least Contagious">
+                <StackPanel>
+                    <TextBox x:Name="pinCode" TextWrapping="Wrap" Text="" PlaceholderText="PIN Code" Margin="0,4"/>
+                    <Button x:Name="button" Content="&#xE126; Fetch" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Tapped="button_Tapped" FontFamily="Segoe UI Symbol"/>
+                    <StackPanel Orientation="Vertical">
+                        <TextBlock x:Name="mostContagious" Foreground="White" TextWrapping="Wrap" FontFamily="Segoe UI Symbol" FontSize="16" Padding="8,4" Margin="4" />
+                        <TextBlock x:Name="leastContagious" Foreground="White" TextWrapping="Wrap" FontFamily="Segoe UI Symbol" FontSize="16" Padding="8,4" Margin="4" />
+                    </StackPanel>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

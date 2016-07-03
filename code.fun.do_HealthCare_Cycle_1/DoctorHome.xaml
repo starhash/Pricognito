@@ -1,0 +1,27 @@
+﻿<Page
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:Maps="using:Windows.UI.Xaml.Controls.Maps"
+    x:Class="code.fun.do_HealthCare_Cycle_1.DoctorHome"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot x:Name="doctorHomePivot" FontSize="13.333" Background="#FF322063" Foreground="White" RequestedTheme="Dark" >
+            <Pivot.Title>
+                <TextBlock Text=" Login Page" FontFamily="Segoe UI Symbol" Tapped="TextBlock_Tapped" />
+            </Pivot.Title>
+            <PivotItem x:Name="doctorHomePivotItem" Header="Doctor Home">
+                <StackPanel Orientation="Vertical">
+
+                    <ListView x:Name="listView" Margin="8,0" Height="545">
+                        <ListViewItem x:Name="Report_Incident" Content="&#xE1E1;  Report Incident" Tapped="Report_Incident_Tapped" Background="{x:Null}" RequestedTheme="Dark" Height="40" MinHeight="40" FontFamily="Segoe UI Symbol"/>
+                        <ListViewItem x:Name="View_Statistics_at_Location" Content="&#xE1EE;  View Statistics at Location" Background="{x:Null}" RequestedTheme="Dark" Height="40" MinHeight="40" FontFamily="Segoe UI Symbol"/>
+                    </ListView>
+                </StackPanel>
+            </PivotItem>
+        </Pivot>
+    </Grid>
+</Page>

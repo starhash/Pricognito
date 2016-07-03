@@ -1,0 +1,30 @@
+﻿<Page
+    x:Class="code.fun.do_HealthCare_Cycle_1.DoctorFeedDataPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d" Loaded="Page_Loaded">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot x:Name="feedPivot" FontFamily="Segoe UI Symbol" Background="#FFD76200" Foreground="White" RequestedTheme="Dark">
+            <Pivot.Title>
+                <TextBlock Text=" Home" FontFamily="Segoe UI Symbol" Tapped="TextBlock_Tapped" />
+            </Pivot.Title>
+            <PivotItem x:Name="feedPivotItem" Header="Incident Report Form">
+                <ScrollViewer VerticalAlignment="Top">
+                    <StackPanel x:Name="feedPivotForm">
+                        <TextBlock x:Name="textBlock" TextWrapping="Wrap" Text="" FontSize="13.333"/>
+                        <TextBox x:Name="patientAADHARorPAN" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="PAN/AADHAR" BorderBrush="#99D76200" Margin="0,4" Height="1"/>
+                        <TextBox x:Name="patientPinCode" TextWrapping="Wrap" Text="" VerticalAlignment="Top" PlaceholderText="Pincode" BorderBrush="#99D76200" Margin="0,4" Height="1"/>
+                        <ComboBox x:Name="diseaseCategory" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,4" BorderBrush="#99D76200" PlaceholderText="Disease Category" SelectionChanged="diseaseCategory_SelectionChanged"/>
+                        <ComboBox x:Name="diseaseSubCategory" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,4" BorderBrush="#99D76200" PlaceholderText="Sub Category/Ailment Name"/>
+                        <Button x:Name="patientReportIncidentButton" Content="&#xE184; Report Incident" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Background="#FF813B00" Foreground="White" Tapped="patientReportIncidentButton_Tapped" FontFamily="Segoe UI Symbol" RequestedTheme="Dark" Margin="2,4"/>
+                    </StackPanel>
+                </ScrollViewer>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>

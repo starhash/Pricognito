@@ -1,0 +1,36 @@
+﻿<Page
+    x:Class="code.fun.do_HealthCare_Cycle_1.UserLogin"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:code.fun.do_HealthCare_Cycle_1"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d">
+
+    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+        <Pivot RequestedTheme="Dark" Background="#FFD64040">
+            <Pivot.Title>
+                <TextBlock Text=" Analytic Page" FontFamily="Segoe UI Symbol" Tapped="TextBlock_Tapped" />
+            </Pivot.Title>
+            <PivotItem Header="Fetch Data from dB">
+                <Grid Width="336">
+                    <StackPanel Orientation="Vertical">
+                        <TextBox x:Name="pinCode" TextWrapping="Wrap" Text="" PlaceholderText="PIN Code" Margin="0,4"/>
+                        <Button x:Name="fetchSubmit" Content="Fetch Data" HorizontalAlignment="Stretch" VerticalAlignment="Stretch" Margin="0,4" Tapped="loginSubmit_Tapped"/>
+                    </StackPanel>
+                    <ListView Margin="0,88,0,8" x:Name="fetchedData" ItemsSource="{Binding Results}">
+                        <ListView.ItemTemplate>
+                            <DataTemplate>
+                                <StackPanel Orientation="Horizontal">
+                                    <TextBlock Text="{Binding Date}" Margin="4,0" />
+                                    <TextBlock Text="{Binding Disease}" Margin="4,0" />
+                                </StackPanel>
+                            </DataTemplate>
+                        </ListView.ItemTemplate>
+                    </ListView>
+                </Grid>
+            </PivotItem>
+        </Pivot>
+
+    </Grid>
+</Page>
